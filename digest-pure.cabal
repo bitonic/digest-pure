@@ -48,3 +48,10 @@ Test-Suite TestSuiteDigestPure
                         digest, QuickCheck >= 2.4.0.1
   Ghc-Options:          -O2 -Wall
   HS-Source-Dirs:       test
+
+Benchmark crc32
+  Type:             exitcode-stdio-1.0
+  Hs-Source-Dirs:   bench
+  Main-Is:          bench.hs
+  Build-Depends:    base >= 4 && < 5, digest, digest-pure, bytestring, mwc-random, criterion
+  Ghc-Options:      -O2 -Wall
